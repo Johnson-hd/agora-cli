@@ -15,13 +15,13 @@ const create = async (projectName: string | undefined) => {
   const isExist = checkFolderExist(projectName)
   if (!isExist) {
     const answers: createProjectAnswers = await createProjectPrompt()
+
     if (answers.template === 'react') {
       console.log(symbol.warning, chalk.yellow('react template is developing...'))
       process.exit(1)
     }
 
-    const loading = ora('template downloading...')
-    loading.start('template downloading...')
+    const spinner = ora('template downloading...').start()
 
     let templateGitURL = ''
     switch (answers.template) {
@@ -35,11 +35,11 @@ const create = async (projectName: string | undefined) => {
 
     try {
       await downloadGitProject(projectName, templateGitURL)
-      loading.succeed('template download complete!')
+      spinner.succeed('template download complete!')
       answers.name = projectName
       updatePackageJSON(`${projectName}/package.json`, answers)
     } catch (e) {
-      loading.fail('template download fail!')
+      spinner.fail('template download fail!')
     }
   }
 }
