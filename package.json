@@ -1,0 +1,64 @@
+{
+  "name": "agora-cli",
+  "version": "1.0.0",
+  "description": "agora-cli",
+  "bin": {
+    "agora-vue-cli": "bin/agora-vue-cli/index.js",
+    "agora-react-cli": "bin/agora-react-cli/index.js",
+    "agora-cli": "bin/agora-cli/index.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnson-hd/agora-cli.git"
+  },
+  "keywords": [
+    "agora",
+    "agora-cli"
+  ],
+  "author": "houdong@agora.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Johnson-hd/agora-cli/issues"
+  },
+  "homepage": "https://github.com/Johnson-hd/agora-cli#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.2.0",
+    "log-symbols": "^4.0.0",
+    "ora": "^4.0.4",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.49"
+  }
+}

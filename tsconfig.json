@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "outDir": "bin",
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"]
+}
