@@ -8,7 +8,7 @@ import create from './command/create'
 program
   .command('create')
   .option('<project-name>', 'project name')
-  .description('create a new project powered by agora-cli')
+  .description('create a new project powered by agora-web-cli')
   // .alias('c')
   .action(async () => {
     await create(process.argv[3])

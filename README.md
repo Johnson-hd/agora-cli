@@ -1,11 +1,11 @@
-## agora-cli
-> agora-cli
+## agora-web-cli
+> agora-web-cli
 
 ## 本地开发
 ```
 sudo npm link
 
-agora-cli -h
+agora-web-cli -h
 agora-react-cli -h
 agora-vue-cli -h
 ```

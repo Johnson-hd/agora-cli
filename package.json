@@ -1,6 +1,6 @@
 {
   "name": "agora-web-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "agora-web-cli",
   "bin": {
     "agora-vue-cli": "bin/agora-vue-cli/index.js",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Johnson-hd/agora-cli.git"
+    "url": "git+https://github.com/Johnson-hd/agora-web-cli.git"
   },
   "keywords": [
     "agora",
@@ -26,9 +26,9 @@
   "author": "houdong@agora.io",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Johnson-hd/agora-cli/issues"
+    "url": "https://github.com/Johnson-hd/agora-web-cli/issues"
   },
-  "homepage": "https://github.com/Johnson-hd/agora-cli#readme",
+  "homepage": "https://github.com/Johnson-hd/agora-web-cli#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
