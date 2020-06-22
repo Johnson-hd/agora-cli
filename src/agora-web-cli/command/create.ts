@@ -11,6 +11,12 @@ import {
 import { checkFolderExist, downloadGitProject } from '../../util'
 import { createFrontendProjectAnswers, createProjectAnswers } from '../model'
 
+const templates = {
+  react: 'direct:https://github.com/Johnson-hd/agroa-react-template.git',
+  vue: 'direct:https://github.com/Johnson-hd/agroa-vue-template.git',
+  node: 'direct:https://github.com/Johnson-hd/agroa-node-template.git',
+}
+
 /**
  * 创建项目
  * @param projectName 项目名称
@@ -49,10 +55,10 @@ const createFrontend = async (projectName: string) => {
   let templateGitURL = ''
   switch (answers.template) {
     case 'vue':
-      templateGitURL = 'direct:https://github.com/Johnson-hd/agroa-vue-template.git'
+      templateGitURL = templates.vue
       break
     case 'react':
-      templateGitURL = 'direct:https://github.com/Johnson-hd/agroa-vue-template.git'
+      templateGitURL = templates.react
       break
   }
 
@@ -80,11 +86,10 @@ const createFrontend = async (projectName: string) => {
  */
 const createBackend = async (projectName: string) => {
   const answers: createProjectAnswers = await createBackendProjectPrompt()
-  const templateGitURL = 'direct:https://github.com/Johnson-hd/agroa-vue-template.git'
 
   const spinner = ora('template downloading...').start()
 
-  await downloadGitProject(projectName, templateGitURL).catch(() => {
+  await downloadGitProject(projectName, templates.node).catch(() => {
     spinner.fail('template download fail!')
     return
   })
