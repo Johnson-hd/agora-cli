@@ -1,11 +1,11 @@
 {
-  "name": "agora-cli",
+  "name": "agora-web-cli",
   "version": "1.0.0",
-  "description": "agora-cli",
+  "description": "agora-web-cli",
   "bin": {
     "agora-vue-cli": "bin/agora-vue-cli/index.js",
     "agora-react-cli": "bin/agora-react-cli/index.js",
-    "agora-cli": "bin/agora-cli/index.js"
+    "agora-web-cli": "bin/agora-web-cli/index.js"
   },
   "files": [
     "bin",
@@ -21,7 +21,7 @@
   },
   "keywords": [
     "agora",
-    "agora-cli"
+    "agora-web-cli"
   ],
   "author": "houdong@agora.io",
   "license": "MIT",
