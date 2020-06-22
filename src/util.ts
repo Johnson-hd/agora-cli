@@ -23,5 +23,9 @@ export const checkFolderExist = (projectName: string): boolean => {
  * @param url git地址
  */
 export const downloadGitProject = async (projectName, url) => {
-  await downloadGitRepo(url, projectName, { clone: true })
+  return new Promise((resolve, reject) => {
+    downloadGitRepo(url, projectName, { clone: true }, err => {
+      err ? reject(err) : resolve()
+    })
+  })
 }

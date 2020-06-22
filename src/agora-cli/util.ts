@@ -20,9 +20,9 @@ export const updatePackageJSON = (fileName: string, updateObj: createProjectAnsw
 }
 
 /**
- * 创建项目提示
+ * 创建前端项目提示
  */
-export const createProjectPrompt = async () => {
+export const createFrontendProjectPrompt = async () => {
   return await inquirer.prompt([
     {
       type: 'list',
@@ -39,6 +39,38 @@ export const createProjectPrompt = async () => {
       type: 'input',
       name: 'author',
       message: 'please enter author: ',
+    },
+  ])
+}
+
+/**
+ * 创建后端项目提示
+ */
+export const createBackendProjectPrompt = async () => {
+  return await inquirer.prompt([
+    {
+      type: 'input',
+      name: 'description',
+      message: 'please enter project description: ',
+    },
+    {
+      type: 'input',
+      name: 'author',
+      message: 'please enter author: ',
+    },
+  ])
+}
+
+/**
+ * 前后端选择提示
+ */
+export const frontendOrBackendPrompt = async () => {
+  return await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'end',
+      message: 'please choose frontend or backend: ',
+      choices: ['frontend', 'backend'],
     },
   ])
 }
