@@ -1,11 +1,10 @@
 ## agora-web-cli
 > agora-web-cli
 
-## 本地开发
-```
-sudo npm link
+### 使用
+```bash
+npm install agora-web-cli -g
 
-agora-web-cli -h
-agora-react-cli -h
-agora-vue-cli -h
+# 创建项目
+agora-web-cli create [projectName]
 ```

@@ -27,18 +27,18 @@ export const createFrontendProjectPrompt = async () => {
     {
       type: 'list',
       name: 'template',
-      message: 'please choose project template: ',
+      message: 'please choose project template:',
       choices: ['vue', 'react'],
     },
     {
       type: 'input',
       name: 'description',
-      message: 'please enter project description: ',
+      message: 'please enter project description:',
     },
     {
       type: 'input',
       name: 'author',
-      message: 'please enter author: ',
+      message: 'please enter author:',
     },
   ])
 }
@@ -51,12 +51,12 @@ export const createBackendProjectPrompt = async () => {
     {
       type: 'input',
       name: 'description',
-      message: 'please enter project description: ',
+      message: 'please enter project description:',
     },
     {
       type: 'input',
       name: 'author',
-      message: 'please enter author: ',
+      message: 'please enter author:',
     },
   ])
 }

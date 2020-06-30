@@ -12,9 +12,9 @@ import { checkFolderExist, downloadGitProject } from '../../util'
 import { createFrontendProjectAnswers, createProjectAnswers } from '../model'
 
 const templates = {
-  react: 'direct:https://github.com/Johnson-hd/agroa-react-template.git',
-  vue: 'direct:https://github.com/Johnson-hd/agroa-vue-template.git',
-  node: 'direct:https://github.com/Johnson-hd/agroa-node-template.git',
+  react: 'direct:https://github.com/Johnson-hd/agora-react-template.git',
+  vue: 'direct:https://github.com/Johnson-hd/agora-vue-template.git',
+  node: 'direct:https://github.com/Johnson-hd/agora-node-template.git',
 }
 
 /**
