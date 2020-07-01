@@ -1,6 +1,6 @@
 {
   "name": "agora-web-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "agora-web-cli",
   "bin": {
     "agora-vue-cli": "bin/agora-vue-cli/index.js",

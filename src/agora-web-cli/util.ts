@@ -15,7 +15,7 @@ export const updatePackageJSON = (fileName: string, updateObj: createProjectAnsw
     Object.keys(updateObj).forEach(key => {
       json[key] = updateObj[key]
     })
-    fs.writeFileSync(fileName, JSON.stringify(json, null, '\t'), 'utf-8')
+    fs.writeFileSync(fileName, JSON.stringify(json), 'utf-8')
   }
 }
 
